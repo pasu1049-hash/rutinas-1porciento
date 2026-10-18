@@ -219,6 +219,11 @@ textarea:focus{outline:none;border-color:var(--n)}
 .foot{text-align:center;padding:26px 0 8px;color:var(--mute);font-size:12px}
 .foot b{font-family:var(--T);color:var(--n);letter-spacing:2px;text-transform:uppercase;font-size:11px;display:block;margin-bottom:4px}
 .pdfbtn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;height:38px;padding:0 14px;border-radius:10px;background:var(--n);color:#fff;font-family:var(--T);font-weight:700;font-size:13px;text-decoration:none}
+.coachbtn{width:100%;margin-top:14px;min-height:96px;border-radius:16px;background:var(--n);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:16px 14px;box-shadow:0 10px 26px rgba(255,104,74,.35);text-align:center}
+.coachbtn:active{transform:scale(.98)}
+.coachbtn .cb1{display:flex;align-items:center;gap:8px;font-family:var(--T);font-weight:800;font-size:19px;line-height:1.15}
+.coachbtn .cb2{font-size:13px;font-weight:600;color:rgba(255,255,255,.92)}
+.coachbtn .cb3{font-family:var(--T);font-weight:800;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:#111;background:#fff;border-radius:6px;padding:2px 8px;margin-top:4px}
 .hide{display:none!important}
 @media (min-width:700px){.name{font-size:52px}.plan{max-width:55%}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -263,6 +268,7 @@ textarea:focus{outline:none;border-color:var(--n)}
 const CFG = {"client_name": "Santiago Cash", "client_short": "Santi", "output_slug": "santiago_cash", "plan_label": "Plan personalizado · Hipertrofia + Fuerza", "semanas": 4, "foto_crop": [0.14, 0.27, 0.9, 0.66], "foto_crop_app": [0.05, 0.2, 0.98, 0.8], "whatsapp": "5492323205798", "pdf_url": "Rutina_SantiagoCash_1PorcientoFitness.pdf", "pills": ["3 días / semana", "4 semanas", "Gym + calistenia"], "movilidad": {"titulo": "Movilidad articular", "duracion": "10 min", "grupos": [{"titulo": "De pie", "items": [{"n": "Rotaciones de hombro", "d": "10 adelante + 10 atrás"}, {"n": "Rotaciones de cadera", "d": "10 por lado"}, {"n": "Pierna: frontal + lateral + rotación", "d": "1+1+1 · 10 por pierna"}, {"n": "Extensiones de pierna desde cuclilla", "d": "10 · extendés y apretás rodillas hacia adentro"}, {"n": "Aperturas de cadera", "d": "10 por lado"}]}, {"titulo": "En la colchoneta", "items": [{"n": "Gato bueno / gato malo", "d": "10 + 10"}, {"n": "Protracción y retracción de escápulas", "d": "10"}, {"n": "Muñecas: dedos, nudillos y palmas", "d": "10 c/u"}, {"n": "Rotaciones 360° de muñeca", "d": "10 por lado"}, {"n": "Gato camello", "d": "10"}]}]}, "reglas": [{"t": "Técnica primero, ego después", "d": "Si la última repetición sale fea, el peso es demasiado. Bajá y completá limpio."}, {"t": "Progresión semanal", "d": "¿Completaste todas las series y reps con buena técnica? La semana siguiente subí 2,5 a 5 kg."}, {"t": "Descansos", "d": "Respetalos: son parte del entrenamiento. Mínimo 1:30 en los bloques de fuerza; lo ideal, 2 a 3 min."}, {"t": "Anotá todo", "d": "Peso y reps de cada semana. Lo que no se mide, no se mejora."}], "dias": [{"id": "d1", "label": "Día 1", "titulo": "Hombros + Piernas", "foco": "Sentadilla, press militar y prensa como base. Core en cada bloque.", "bloques": [{"letra": "B", "titulo": "Entrada en calor", "vueltas": 3, "descanso": "1 min", "descanso_seg": 60, "ejercicios": [{"nombre": "Hollow body", "dosis": "20 seg", "tipo": "tiempo", "tip": "Zona lumbar pegada al piso todo el tiempo."}, {"nombre": "Superman hold", "dosis": "20 seg", "tipo": "tiempo", "tip": "Brazos y piernas arriba, glúteos apretados."}, {"nombre": "Plancha de antebrazo", "dosis": "20 seg", "tipo": "tiempo", "tip": "Cuerpo en línea recta, sin hundir la cadera."}, {"nombre": "Construcciones", "dosis": "10 reps", "tipo": "reps"}, {"nombre": "Toque de hombro con pies en altura", "dosis": "10 por hombro", "tipo": "reps", "tip": "Cadera quieta: que no se balancee al tocar."}, {"nombre": "Sillón de cuádriceps", "dosis": "12 · 10 · 8", "tipo": "peso", "tip": "Pirámide: 1ª vuelta liviano, subís peso en la 2ª y otra vez en la 3ª."}]}, {"letra": "C", "titulo": "Fuerza", "vueltas": 4, "descanso": "3 min", "descanso_seg": 180, "ejercicios": [{"nombre": "Sentadilla (barra libre, Smith o Hack)", "dosis": "12 reps", "tipo": "peso", "tip": "Arrancás con 10 kg por lado. Si las 12 salen limpias, pasás a 15 kg por lado."}, {"nombre": "Press militar sentado", "dosis": "12 reps", "tipo": "peso", "tip": "Espalda bien apoyada en el respaldo: evitás desbalances, lesiones y dolores."}, {"nombre": "Abdominales sit-ups", "dosis": "12 reps", "tipo": "reps", "tip": "Subís controlado, sin tirar del cuello."}]}, {"letra": "D", "titulo": "Fuerza + Hombro", "vueltas": 4, "descanso": "3 min", "descanso_seg": 180, "ejercicios": [{"nombre": "Prensa", "dosis": "12 reps", "tipo": "peso", "tip": "Rango completo, sin despegar la cadera del asiento."}, {"nombre": "Vuelos frontales + laterales (1 y 1)", "dosis": "12 reps", "tipo": "peso", "tip": "Uno frontal, uno lateral = 2 reps. Probá con 5 kg; si no llegás a 12, bajá el peso."}, {"nombre": "Abdominales twist", "dosis": "12 por lado", "tipo": "reps", "tip": "Gira el torso, no solo los brazos."}]}]}, {"id": "d2", "label": "Día 2", "titulo": "Espalda + Bíceps", "foco": "Dominadas estrictas como entrada en calor y volumen de tracción en polea y mancuerna.", "bloques": [{"letra": "B", "titulo": "Entrada en calor · Dominadas", "vueltas": 3, "descanso": "1 min", "descanso_seg": 60, "ejercicios": [{"nombre": "Dominadas pronas + supinas (sin banda)", "dosis": "5 + 5", "tipo": "reps", "tip": "Rango completo: el mentón pasa la barra. Arriba sostenés 3 seg y bajás lento. Volvés a subir saltando explosivo."}, {"nombre": "Abdominales rodilla al pecho colgado", "dosis": "10 reps", "tipo": "reps", "tip": "Sin balanceo: subís las rodillas con el abdomen, no con impulso."}]}, {"letra": "C", "titulo": "Tracción + Bíceps", "vueltas": 4, "descanso": "2-3 min", "descanso_seg": 150, "ejercicios": [{"nombre": "Dorsalera por delante", "dosis": "12 reps", "tipo": "peso", "tip": "Llevás la barra al pecho tirando con los codos, pecho afuera."}, {"nombre": "Bíceps alternados con mancuerna", "dosis": "12 por brazo", "tipo": "peso", "tip": "Codos pegados al cuerpo, sin balancear el torso."}, {"nombre": "Semiangelito con mancuerna", "dosis": "12 reps", "tipo": "peso"}, {"nombre": "Saltos", "dosis": "30 saltos", "tipo": "reps"}]}, {"letra": "D", "titulo": "Remo + Core", "vueltas": 4, "descanso": "2-3 min", "descanso_seg": 150, "ejercicios": [{"nombre": "Remo al ombligo (polea o polea a un brazo)", "dosis": "12 reps", "tipo": "peso", "tip": "Llevás el agarre al ombligo y juntás las escápulas al final."}, {"nombre": "Abdominales twist con disco de 10 kg", "dosis": "10 por lado", "tipo": "reps"}, {"nombre": "Bíceps martillo", "dosis": "12 reps", "tipo": "peso", "tip": "Agarre neutro, subida controlada y bajada lenta."}]}, {"letra": "E", "titulo": "Polea · Barra recta", "vueltas": 4, "descanso": "2-3 min", "descanso_seg": 150, "ejercicios": [{"nombre": "Pullover en polea con barra recta", "dosis": "12 reps", "tipo": "peso", "tip": "Brazos casi extendidos: el que tira es el dorsal."}, {"nombre": "Bíceps en polea (misma barra, polea abajo)", "dosis": "12 reps", "tipo": "peso", "tip": "Bajás la polea al último agujero y seguís con la misma barra."}]}]}, {"id": "d3", "label": "Día 3", "titulo": "Pecho + Tríceps", "foco": "Empuje con peso libre y peso corporal. Cerrás con aislamiento y core.", "bloques": [{"letra": "B", "titulo": "Entrada en calor", "vueltas": 3, "descanso": "1 min", "descanso_seg": 60, "ejercicios": [{"nombre": "Flexiones normales", "dosis": "10 reps", "tipo": "reps", "tip": "Pecho toca abajo, codos a 45° del cuerpo."}, {"nombre": "Flexiones diamante", "dosis": "10 reps", "tipo": "reps", "tip": "Manos juntas bajo el pecho, codos pegados."}, {"nombre": "Plancha", "dosis": "1 min", "tipo": "tiempo"}]}, {"letra": "C", "titulo": "Fuerza de empuje", "vueltas": 4, "descanso": "3 min", "descanso_seg": 180, "ejercicios": [{"nombre": "Press en banco inclinado", "dosis": "12 reps", "tipo": "peso", "tip": "Escápulas juntas y apoyadas, bajás controlado a la parte alta del pecho."}, {"nombre": "Flexiones declinadas (pies en altura)", "dosis": "12 reps", "tipo": "reps"}, {"nombre": "Fondos en paralelas", "dosis": "12 reps", "tipo": "reps", "tip": "Bajás hasta 90° de codo, sin encoger los hombros."}]}, {"letra": "D", "titulo": "Aislamiento + Core", "vueltas": 4, "descanso": "2-3 min", "descanso_seg": 150, "ejercicios": [{"nombre": "Mariposa / apertura de pecho en máquina", "dosis": "12 reps", "tipo": "peso", "tip": "Apretás el pecho 1 seg al cerrar."}, {"nombre": "Tríceps en polea a un brazo", "dosis": "12 por brazo", "tipo": "peso", "tip": "Codo fijo al costado, extensión completa."}, {"nombre": "Abdominales bisagra con disco", "dosis": "12 reps", "tipo": "peso", "tip": "Disco de 5 o 10 kg."}]}]}]};
 const KEY = '1pf_rutina_' + CFG.output_slug + '_v1';
 const DAYS = CFG.dias;
+const WA_ICON = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>';
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -272,7 +278,14 @@ function load(){
   try{ const raw = localStorage.getItem(KEY); if(raw) return JSON.parse(raw); }catch(e){ storageOK = false; }
   return null;
 }
-let S = load() || { v:1, weeks: CFG.semanas || 4, cur: 1, tab: DAYS[0].id, log: {} };
+function clean(x){
+  if(!x || typeof x!=='object' || !x.log) return null;
+  Object.values(x.log).forEach(wk=>{ if(!wk) return; Object.values(wk).forEach(L=>{ if(!L) return;
+    L.sets = L.sets || {}; L.mob = L.mob || {};
+    Object.keys(L.sets).forEach(k=>{ const a=Array.isArray(L.sets[k])?L.sets[k]:[]; L.sets[k]=Array.from(a,v=>v&&typeof v==='object'?v:{}); }); }); });
+  return x;
+}
+let S = clean(load()) || { v:1, weeks: CFG.semanas || 4, cur: 1, tab: DAYS[0].id, log: {} };
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ storageOK = false; } }
 try{ localStorage.setItem(KEY+'_t','1'); localStorage.removeItem(KEY+'_t'); }catch(e){ storageOK = false; }
 
@@ -296,7 +309,7 @@ function todayStr(){ const t=new Date(); return t.getFullYear()+'-'+String(t.get
 function fmtDate(s){ if(!s) return ''; const [y,m,d]=s.split('-'); return d+'/'+m; }
 function num(v){ const x = parseFloat(String(v).replace(',','.')); return isNaN(x) ? null : x; }
 function exKey(b, i){ return b.letra + (i+1); }
-function setsOf(w, d, key){ const l = peek(w,d); return l && l.sets[key] || []; }
+function setsOf(w, d, key){ const l = peek(w,d); return Array.from(l && l.sets && l.sets[key] || [], v=>v||{}); }
 function bestKg(w, d, key){ let best=null; setsOf(w,d,key).forEach(s=>{ const k=num(s.kg); if(k!==null && (best===null||k>best)) best=k; }); return best; }
 function dayVolume(w, d){
   let v=0; const day = DAYS.find(x=>x.id===d);
@@ -323,7 +336,7 @@ function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('sh
 /* ───────── render: header ───────── */
 function renderHero(){
   const parts = CFG.client_name.split(' ');
-  const last = parts.length>1 ? parts.pop() : '';
+  const last = parts.pop();
   $('#name').innerHTML = esc(parts.join(' ')) + (last ? ' <span>'+esc(last)+'</span>' : '');
   const h = new Date().getHours();
   $('#hello').textContent = (h<12?'Buen día':h<20?'Buenas tardes':'Buenas noches') + ', ' + (CFG.client_short || parts[0]) + ' 👊';
@@ -405,7 +418,8 @@ function renderDay(d){
   });
 
   h += '<section class="card pad"><div class="lbl">Notas del día</div><p class="muted" style="margin:4px 0 10px">Sensaciones, molestias, récords. Le llega a Pasu en el resumen.</p><textarea id="fNotes" placeholder="Ej: la sentadilla salió liviana, la semana que viene subo 5 kg">'+esc(L.notes)+'</textarea>'
-    + '<button class="btn pri full" style="margin-top:12px" id="finish">Terminé el '+esc(d.label.toLowerCase())+' 💪</button></section>';
+    + '<button class="coachbtn" id="finish"><span class="cb1">'+WA_ICON+'Guardar y enviar al coach</span><span class="cb2">Matías Pasutti · Instructor y coach en calistenia</span><span class="cb3">1% Fitness</span></button>'
+    + '<p class="muted" style="text-align:center;font-size:12px;margin-top:8px">Se abre WhatsApp con el resumen de tu '+esc(d.label.toLowerCase())+' listo: solo tocá enviar.</p></section>';
   return h;
 }
 
@@ -463,8 +477,10 @@ function spark(arr){
 function render(){
   renderHero(); renderBar();
   const d = DAYS.find(x=>x.id===S.tab);
-  $('#main').innerHTML = (storageOK?'':'<div class="warn" style="display:block">⚠️ Este navegador no deja guardar datos. Abrí el archivo con Chrome o Safari, o usá Backup al terminar.</div>')
-    + (d ? renderDay(d) : renderProg());
+  let body;
+  try{ body = d ? renderDay(d) : renderProg(); }
+  catch(err){ body = '<section class="card pad"><div class="lbl">Ups</div><h2>Algo no cargó bien</h2><p class="muted" style="margin-top:6px">Tus datos están guardados. Mandale una captura de esta pantalla a Pasu.</p><p class="muted" style="font-size:11px;margin-top:8px">'+esc(err && err.message)+'</p></section>'; }
+  $('#main').innerHTML = (storageOK?'':'<div class="warn" style="display:block">⚠️ Este navegador no deja guardar datos. Abrí el archivo con Chrome o Safari, o usá Backup al terminar.</div>') + body;
 }
 
 /* ───────── eventos ───────── */
@@ -482,7 +498,7 @@ document.addEventListener('click', ev=>{
     const on = !all.every(k=>L.mob[k]); all.forEach(k=>L.mob[k]=on); save(); keepScroll(render); return; }
   if(b.dataset.timer){ startTimer(+b.dataset.timer, 'Descanso'); return; }
   if(b.dataset.done && d){
-    const [key,s]=b.dataset.done.split('|'); const L=dl(S.cur,d.id); const arr=L.sets[key] ||= []; const v=arr[+s] ||= {};
+    const [key,s]=b.dataset.done.split('|'); const L=dl(S.cur,d.id); const arr=L.sets[key] ||= []; for(let i=0;i<=+s;i++) arr[i] ||= {}; const v=arr[+s];
     v.ok=!v.ok;
     if(v.ok){
       const blk=d.bloques.find(x=>key.startsWith(x.letra)); const ex=blk.ejercicios[+key.slice(1)-1];
@@ -493,7 +509,9 @@ document.addEventListener('click', ev=>{
     save(); keepScroll(render); return;
   }
   if(b.id==='finish' && d){ const L=dl(S.cur,d.id); L.att='si'; if(!L.date) L.date=todayStr(); save();
-    const nd=nextDay(); render(); toast('¡'+d.label+' hecho! '+(nd?'Próximo: '+nd.d.label+' (S'+nd.w+')':'Plan completo 🏆')); window.scrollTo({top:0,behavior:'smooth'}); return; }
+    const url='https://wa.me/'+CFG.whatsapp+'?text='+encodeURIComponent(daySummary(S.cur,d));
+    const win=window.open(url,'_blank'); if(!win) location.href=url;
+    const nd=nextDay(); render(); toast('¡'+d.label+' guardado! '+(nd?'Próximo: '+nd.d.label+' (S'+nd.w+')':'Plan completo 🏆')); window.scrollTo({top:0,behavior:'smooth'}); return; }
   if(b.id==='sendWA'){ window.open('https://wa.me/'+CFG.whatsapp+'?text='+encodeURIComponent(summary(S.cur)),'_blank'); return; }
   if(b.id==='exp'){ const blob=new Blob([JSON.stringify(S,null,1)],{type:'application/json'}); const a=document.createElement('a');
     a.href=URL.createObjectURL(blob); a.download='backup_'+CFG.output_slug+'_'+todayStr()+'.json'; document.body.appendChild(a); a.click(); a.remove(); toast('Backup descargado'); return; }
@@ -503,29 +521,40 @@ document.addEventListener('click', ev=>{
 document.addEventListener('input', ev=>{
   const t=ev.target, d=DAYS.find(x=>x.id===S.tab); if(!d) return;
   const L=dl(S.cur,d.id);
-  if(t.dataset.k){ const arr=L.sets[t.dataset.k] ||= []; const v=arr[+t.dataset.s] ||= {}; v[t.dataset.f]=t.value.trim(); save(); return; }
+  if(t.dataset.k){ const arr=L.sets[t.dataset.k] ||= []; for(let i=0;i<=+t.dataset.s;i++) arr[i] ||= {}; const v=arr[+t.dataset.s]; v[t.dataset.f]=t.value.trim(); save(); return; }
   if(t.id==='fNotes'){ L.notes=t.value; save(); return; }
   if(t.id==='fDate'){ L.date=t.value; save(); return; }
 });
 document.addEventListener('change', ev=>{
   if(ev.target.id==='impFile'){ const f=ev.target.files[0]; if(!f) return; const r=new FileReader();
-    r.onload=()=>{ try{ const x=JSON.parse(r.result); if(!x.log) throw 0; S=x; save(); render(); toast('Datos restaurados ✓'); }catch(e){ toast('Ese archivo no es un backup válido'); } }; r.readAsText(f); }
+    r.onload=()=>{ try{ const x=clean(JSON.parse(r.result)); if(!x) throw 0; S=x; save(); render(); toast('Datos restaurados ✓'); }catch(e){ toast('Ese archivo no es un backup válido'); } }; r.readAsText(f); }
 });
 function keepScroll(fn){ const y=window.scrollY; fn(); window.scrollTo(0,y); }
 
 /* ───────── resumen WhatsApp ───────── */
+function dayLines(w, d){
+  const L=peek(w,d.id)||{}; let t='';
+  t += '*'+d.label+' · '+d.titulo+'* '+(L.att==='si'?'✅'+(L.date?' '+fmtDate(L.date):''):L.att==='no'?'❌ no fui':'⏳ pendiente')+(L.energy?' '+['😴','😐','💪','🔥'][L.energy-1]:'')+'\n';
+  if(!L.sets) return t;
+  const mobTot=CFG.movilidad.grupos.reduce((a,g)=>a+g.items.length,0), mobOk=Object.values(L.mob||{}).filter(Boolean).length;
+  if(mobOk) t += 'Movilidad: '+mobOk+'/'+mobTot+'\n';
+  d.bloques.forEach(b=>b.ejercicios.forEach((ex,i)=>{ const key=exKey(b,i), tg=targets(ex,b.vueltas);
+    const arr=setsOf(w,d.id,key).slice(0,b.vueltas).map((s,si)=>(s.kg||s.r||s.ok)?{kg:s.kg,r:s.r||tg[si]}:null).filter(Boolean);
+    if(!arr.length) return;
+    const body = ex.tipo==='peso' ? arr.map(s=>(s.kg||'–')+'×'+s.r).join(' · ') : arr.map(s=>s.r).join(' · ')+(ex.tipo==='tiempo'?' seg':'');
+    t += key+' '+ex.nombre+': '+body+'\n'; }));
+  if(L.notes) t += '📝 '+L.notes.trim()+'\n';
+  return t;
+}
+function daySummary(w, d){
+  const v=dayVolume(w,d.id), tt=totals();
+  return '💪 *Rutina 1% · '+CFG.client_name+'*\n*Semana '+w+'*\n\n'+dayLines(w,d)
+    + (v?'\nVolumen del día: '+Math.round(v)+' kg':'')
+    + '\nAsistencia semana: '+weekAtt(w)+'/'+DAYS.length+' · Sesiones: '+tt.done+'/'+(S.weeks*DAYS.length)+'\n\n#UNOPORCIENTO';
+}
 function summary(w){
   let t = '💪 *Rutina 1% · '+CFG.client_name+'*\n*Semana '+w+'* — asistencia '+weekAtt(w)+'/'+DAYS.length+'\n';
-  DAYS.forEach(d=>{ const L=peek(w,d.id)||{};
-    t += '\n*'+d.label+' · '+d.titulo+'* '+(L.att==='si'?'✅'+(L.date?' '+fmtDate(L.date):''):L.att==='no'?'❌ no fui':'⏳ pendiente')+(L.energy?' '+['😴','😐','💪','🔥'][L.energy-1]:'')+'\n';
-    if(!L.sets) return;
-    d.bloques.forEach(b=>b.ejercicios.forEach((ex,i)=>{ const key=exKey(b,i), tg=targets(ex,b.vueltas);
-      const arr=(L.sets[key]||[]).slice(0,b.vueltas).map((s,si)=>s&&(s.kg||s.r||s.ok)?{kg:s.kg,r:s.r||tg[si]}:null).filter(Boolean);
-      if(!arr.length) return;
-      const body = ex.tipo==='peso' ? arr.map(s=>(s.kg||'–')+'×'+s.r).join(' · ') : arr.map(s=>s.r).join(' · ')+(ex.tipo==='tiempo'?' seg':'');
-      t += key+' '+ex.nombre+': '+body+'\n'; }));
-    if(L.notes) t += '📝 '+L.notes.trim()+'\n';
-  });
+  DAYS.forEach(d=>{ t += '\n'+dayLines(w,d); });
   const v = DAYS.reduce((a,d)=>a+dayVolume(w,d.id),0); if(v) t += '\nVolumen semana: '+Math.round(v)+' kg\n';
   return t + '\n#UNOPORCIENTO';
 }
@@ -550,6 +579,7 @@ $('#tPlus').onclick=()=>{ T.end+=15000; T.total+=15; if(!T.iv||$('#tTime').textC
 $('#tMinus').onclick=()=>{ T.end-=15000; tick(); };
 $('#tStop').onclick=()=>{ clearInterval(T.iv); $('#timer').classList.remove('show'); };
 
+$('#tabs').style.gridTemplateColumns='repeat('+(DAYS.length+1)+',1fr)';
 if(CFG.pdf_url){ const a=$('#pdfBtn'); a.href=CFG.pdf_url; a.classList.remove('hide'); }
 render();
 </script>
